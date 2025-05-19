@@ -8,6 +8,10 @@
 
 > Maintain the integrity of your inbox by accurately identifying and filtering unwanted messages.
 
+![Ekran görüntüsü 2025-05-19 172233](https://github.com/user-attachments/assets/05146fe4-afc0-46d9-910b-53c6737f4c63)
+
+![Ekran görüntüsü 2025-05-19 172126](https://github.com/user-attachments/assets/1707c066-9aae-4e07-b24f-155bec5d469b)
+
 ---
 
 ## 🔍 Features
